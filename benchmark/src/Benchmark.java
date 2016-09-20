@@ -3,10 +3,12 @@
  */
 import com.google.caliper.BeforeExperiment;
 import com.google.caliper.Param;
+import com.google.caliper.api.VmOptions;
 
 import java.io.*;
 import java.util.ArrayList;
 
+@VmOptions("-XX:-TieredCompilation")
 public class Benchmark {
     @Param
     private String pathToData = "";
